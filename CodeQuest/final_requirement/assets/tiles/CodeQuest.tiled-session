@@ -1,0 +1,74 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "CodeQuest.tmx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "fileStates": {
+        "CodeQuest.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 326,
+                "y": 234.33333333333334
+            }
+        },
+        "CodeQuest.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "CodeQuest2.tsx": {
+            "scaleInDock": 1.5,
+            "scaleInEditor": 1
+        },
+        "CodeQuest3.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "CodeQuest4.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "CodeQuest5.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "CodeQuest6.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
+    },
+    "last.imagePath": "C:/github_projects/CodeQuest/final_requirement/assets/images/tileset",
+    "map.height": 30,
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "map.width": 40,
+    "openFiles": [
+        "CodeQuest.tmx",
+        "CodeQuest.tsx",
+        "CodeQuest2.tsx",
+        "CodeQuest3.tsx",
+        "CodeQuest4.tsx",
+        "CodeQuest5.tsx",
+        "CodeQuest6.tsx"
+    ],
+    "project": "CodeQuest.tiled-project",
+    "recentFiles": [
+        "CodeQuest6.tsx",
+        "CodeQuest5.tsx",
+        "CodeQuest4.tsx",
+        "CodeQuest3.tsx",
+        "CodeQuest2.tsx",
+        "CodeQuest.tsx",
+        "CodeQuest.tmx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    }
+}
