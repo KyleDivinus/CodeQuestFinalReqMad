@@ -37,6 +37,7 @@ class SelectCharacterScreen extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
+                      // Character cards with image and name
                       CharacterCard(
                         imagePath: 'assets/images/characters/char1.png',
                         name: 'Blaze',
@@ -61,9 +62,10 @@ class SelectCharacterScreen extends StatelessWidget {
   }
 }
 
+// Widget for individual character card
 class CharacterCard extends StatefulWidget {
-  final String imagePath;
-  final String name;
+  final String imagePath; // Path to character image
+  final String name; // Name of the character
 
   CharacterCard({required this.imagePath, required this.name});
 
@@ -73,25 +75,25 @@ class CharacterCard extends StatefulWidget {
 
 class _CharacterCardState extends State<CharacterCard>
     with TickerProviderStateMixin {
-  late AnimationController _controller;
-  late Animation<double> _sizeAnimation;
+  late AnimationController _controller; // Controller for animations
+  late Animation<double> _sizeAnimation; // Animation for scaling the card
 
   @override
   void initState() {
     super.initState();
     _controller = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 350),
+      duration: Duration(milliseconds: 350), // Duration of the animation
     );
     _sizeAnimation = Tween<double>(begin: 1.0, end: 1.20).animate(
       CurvedAnimation(parent: _controller, curve: Curves.easeInOut),
     );
-    _controller.repeat(reverse: true);
+    _controller.repeat(reverse: true); // Animation repeats back and forth
   }
 
   @override
   void dispose() {
-    _controller.dispose();
+    _controller.dispose(); // Dispose controller to free up resources
     super.dispose();
   }
 
@@ -99,6 +101,7 @@ class _CharacterCardState extends State<CharacterCard>
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
+        // Show a snackbar when a character is selected
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text('${widget.name} selected!')),
         );
@@ -109,15 +112,15 @@ class _CharacterCardState extends State<CharacterCard>
             animation: _controller,
             builder: (context, child) {
               return Transform.scale(
-                scale: _sizeAnimation.value,
+                scale: _sizeAnimation.value, // Apply scale animation
                 child: Container(
                   width: 140,
                   height: 140,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(12.0),
                     child: Image.asset(
-                      widget.imagePath,
-                      fit: BoxFit.cover,
+                      widget.imagePath, // Load the character image
+                      fit: BoxFit.cover, // Ensure image covers the card
                     ),
                   ),
                 ),
@@ -126,7 +129,7 @@ class _CharacterCardState extends State<CharacterCard>
           ),
           SizedBox(height: 8),
           Text(
-            widget.name,
+            widget.name, // Display character name below the image
             style: TextStyle(
               fontFamily: 'PressStart2P',
               fontSize: 14,
